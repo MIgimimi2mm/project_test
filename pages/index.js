@@ -12,7 +12,7 @@ export default function Home() {
 
   const fetchMessage = async () => {
     try {
-      const response = await fetch('http://localhost:5000/');
+      const response = await fetch('https://project-test-back.onrender.com');
       const data = await response.text();
       setMessage(data);
     } catch (error) {
@@ -22,7 +22,7 @@ export default function Home() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:5000/message', {
+      const response = await fetch('https://project-test-back.onrender.com/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
