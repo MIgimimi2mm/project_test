@@ -58,19 +58,7 @@ export default function Water() {
 
 
                 </div>
-                <div className={styles.title}>
-                    <h1>Next.js + Flask</h1>
-                    <input
-                        type="text"
-                        value={inputText}
-                        onChange={(e) => setInputText(e.target.value)}
-                        placeholder="Enter text"
-                    />
-                    <button onClick={handleSubmit}>Submit</button>
-                    <h1 className={styles.title}>
-                        <p>出力: {message}</p>
-                    </h1>
-                </div>
+
             </div>
 
         </>
