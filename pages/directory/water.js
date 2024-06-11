@@ -90,14 +90,14 @@ export default function Water() {
 
                             <motion.button
                                 whileTap={{ scale: 1.3 }}
-                                className="w-[400px] h-[400px] rounded-full bg-[#3869b4] flex items-center justify-center"
+                                className="w-[350px] h-[350px] rounded-full bg-[#3869b4] flex items-center justify-center"
                                 onClick={handleClick}
                             >
 
                                 <img
                                     src="/images/water.jpg"
                                     alt="funnel inside a round icon"
-                                    className="w-[350px] h-[350px] rounded-full"
+                                    className="w-[300px] h-[300px] rounded-full"
                                 />
 
 
