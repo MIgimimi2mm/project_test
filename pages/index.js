@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
+
     <div className="font-sans mx-auto">
       <Header />
 
@@ -59,6 +60,9 @@ export default function Home() {
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
       `}</style>
+
+
+
     </div>
   );
 }
