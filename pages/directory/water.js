@@ -66,7 +66,7 @@ export default function Water() {
             const response = await fetch('https://project-test-back.onrender.com/message', {
             */}
 
-            const response = await fetch('https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app', {
+            const response = await fetch('https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export default function Water() {
                         <h1 className="text-white text-4xl font-bold mb-4 text-center">
                             下のアイコンをタップ！
                         </h1>
-                        <Link href="https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app">
+                        <Link href="https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app/">
                             <div className={`${className} wrapper`}>
 
 
