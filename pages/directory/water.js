@@ -9,6 +9,9 @@ import css from "styled-jsx/css";
 import { useState, useEffect } from 'react';
 
 export default function Water() {
+
+    const url = "https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app";
+
     const [clickCount, setClickCount] = useState(0);
     const [inputText, setInputText] = useState('');
     const [message, setMessage] = useState('');
@@ -82,28 +85,29 @@ export default function Water() {
                         <h1 className="text-white text-4xl font-bold mb-4 text-center">
                             下のアイコンをタップ！
                         </h1>
-
-                        <div className={`${className} wrapper`}>
-
-
+                        <Link href="https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app">
+                            <div className={`${className} wrapper`}>
 
 
-                            <motion.button
-                                whileTap={{ scale: 1.3 }}
-                                className="w-[350px] h-[350px] rounded-full bg-[#3869b4] flex items-center justify-center"
-                                onClick={handleClick}
-                            >
-
-                                <img
-                                    src="/images/water.jpg"
-                                    alt="funnel inside a round icon"
-                                    className="w-[300px] h-[300px] rounded-full"
-                                />
 
 
-                            </motion.button>
+                                <motion.button
+                                    whileTap={{ scale: 1.3 }}
+                                    className="w-[350px] h-[350px] rounded-full bg-[#3869b4] flex items-center justify-center"
+                                    onClick={handleClick}
+                                >
 
-                        </div>
+                                    <img
+                                        src="/images/water.jpg"
+                                        alt="funnel inside a round icon"
+                                        className="w-[300px] h-[300px] rounded-full"
+                                    />
+
+
+                                </motion.button>
+
+                            </div>
+                        </Link>
 
 
                         <h2 className="text-white text-2xl font-semibold mt-4 text-center">
