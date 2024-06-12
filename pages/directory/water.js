@@ -61,7 +61,12 @@ export default function Water() {
 
     const handleSubmit = async () => {
         try {
+
+            {/*
             const response = await fetch('https://project-test-back.onrender.com/message', {
+            */}
+
+            const response = await fetch('https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
