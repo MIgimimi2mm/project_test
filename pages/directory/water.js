@@ -37,7 +37,7 @@ export default function Water() {
 
     const handleClick = async () => {
         try {
-            const response = await fetch('https://pj-back.onrender.com/increment-click', {
+            const response = await fetch('https://smart.tcpexposer.com/led', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
