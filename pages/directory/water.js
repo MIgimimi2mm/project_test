@@ -98,9 +98,7 @@ export default function Water() {
 
                 <Header />
 
-                <Head>
-                    <title>ハイテクガーデン水やりページ</title>
-                </Head>
+
 
                 <div className="flex items-center justify-center h-screen bg-[#547443]">
                     <div className="w-full h-full flex flex-col items-center justify-center">
