@@ -8,12 +8,16 @@ import Link from 'next/link';
 
 export default function Home() {
 
-  const url = "https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app";
+
 
   return (
 
     <div className="font-sans mx-auto">
       <Header />
+
+      <Head>
+        <title>ハイテクガーデン</title>
+      </Head>
 
       <div className="flex items-center justify-center ">
         <Image
