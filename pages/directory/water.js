@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 
 export default function Water() {
 
-    const url = "https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app";
+    // const url = "https://1377-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app";
 
     const [clickCount, setClickCount] = useState(0);
     const [inputText, setInputText] = useState('');
@@ -19,6 +19,11 @@ export default function Water() {
     useEffect(() => {
         fetchClickCount();
     }, []);
+
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
 
     const fetchClickCount = async () => {
         try {
@@ -45,6 +50,8 @@ export default function Water() {
         }
     };
 
+    ///////////////////////////////////////////////////////////////////////////////
+
     useEffect(() => {
         fetchMessage();
     }, []);
@@ -59,84 +66,92 @@ export default function Water() {
         }
     };
 
+    ///////////////////////////////////////////////////////////////////////////////
+
     const handleSubmit = async () => {
         try {
 
-            {/*
-            const response = await fetch('https://project-test-back.onrender.com/message', {
-            */}
 
+            const response = await fetch('https://project-test-back.onrender.com/message', {
+            
+
+            {/*
             const response = await fetch('https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app/', {
+
+            */}
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                },
+                'Content-Type': 'application/json',
+            },
                 body: JSON.stringify({ inputText }),
             });
-            const data = await response.json();
-            setMessage(data.message);
-            setInputText('');
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
-    return (
-        <>
-            <div className="font-sans mx-auto">
-                <Header />
-
-                <div className="flex items-center justify-center h-screen bg-[#547443]">
-                    <div className="w-full h-full flex flex-col items-center justify-center">
-                        <h1 className="text-white text-4xl font-bold mb-4 text-center">
-                            下のアイコンをタップ！
-                        </h1>
-                        <Link href="https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app/">
-                            <div className={`${className} wrapper`}>
+        const data = await response.json();
+        setMessage(data.message);
+        setInputText('');
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+return (
+    <>
+        <div className="font-sans mx-auto">
+            <Header />
+
+            <div className="flex items-center justify-center h-screen bg-[#547443]">
+                <div className="w-full h-full flex flex-col items-center justify-center">
+                    <h1 className="text-white text-4xl font-bold mb-4 text-center">
+                        下のアイコンをタップ！
+                    </h1>
+                    <Link href="https://045b-2400-2200-603-c292-b0b9-8807-9beb-b5d9.ngrok-free.app/">
+                        <div className={`${className} wrapper`}>
 
 
-                                <motion.button
-                                    whileTap={{ scale: 1.3 }}
-                                    className="w-[350px] h-[350px] rounded-full bg-[#3869b4] flex items-center justify-center"
-                                    onClick={handleClick}
-                                >
-
-                                    <img
-                                        src="/images/water.jpg"
-                                        alt="funnel inside a round icon"
-                                        className="w-[300px] h-[300px] rounded-full"
-                                    />
 
 
-                                </motion.button>
+                            <motion.button
+                                whileTap={{ scale: 1.3 }}
+                                className="w-[350px] h-[350px] rounded-full bg-[#3869b4] flex items-center justify-center"
+                                onClick={handleClick}
+                            >
 
-                            </div>
-                        </Link>
+                                <img
+                                    src="/images/water.jpg"
+                                    alt="funnel inside a round icon"
+                                    className="w-[300px] h-[300px] rounded-full"
+                                />
 
 
-                        <h2 className="text-white text-2xl font-semibold mt-4 text-center">
-                            ボタンが押された回数：{clickCount}
-                        </h2>
-                    </div>
+                            </motion.button>
+
+                        </div>
+                    </Link>
+
+
+                    <h2 className="text-white text-2xl font-semibold mt-4 text-center">
+                        ボタンが押された回数：{clickCount}
+                    </h2>
                 </div>
-                <h1>Next.js + Flask</h1>
-                <input
-                    type="text"
-                    value={inputText}
-                    onChange={(e) => setInputText(e.target.value)}
-                    placeholder="Enter text"
-                />
-                <button onClick={handleSubmit}>Submit</button>
-                <h1 >
-                    <p>出力: {message}</p>
-                </h1>
             </div>
+            <h1>Next.js + Flask</h1>
+            <input
+                type="text"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+                placeholder="Enter text"
+            />
+            <button onClick={handleSubmit}>Submit</button>
+            <h1 >
+                <p>出力: {message}</p>
+            </h1>
+        </div>
 
 
-            {styles}
-        </>
-    );
+        {styles}
+    </>
+);
 }
 
 
