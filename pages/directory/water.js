@@ -72,7 +72,7 @@ export default function Water() {
         try {
 
 
-            const response = await fetch('https://smart.tcpexposer.com/led/', {
+            const response = await fetch('https://smart.tcpexposer.com/led', {
 
 
 
