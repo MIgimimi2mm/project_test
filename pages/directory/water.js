@@ -95,7 +95,9 @@ export default function Water() {
     return (
         <>
             <div className="font-sans mx-auto">
-                <Header />
+                <Head>
+                    <title>ハイテクガーデン</title>
+                </Head>
 
                 <div className="flex items-center justify-center h-screen bg-[#547443]">
                     <div className="w-full h-full flex flex-col items-center justify-center">
