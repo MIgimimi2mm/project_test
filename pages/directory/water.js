@@ -74,7 +74,8 @@ export default function Water() {
 
                 <Header />
 
-                <div className="flex justify-center min-h-screen bg-[#547443]">
+                <div className="flex justify-center min-h-screen bg-[#547443] p-6">
+
 
                     <motion.div
                         initial={{ opacity: 0 }}
