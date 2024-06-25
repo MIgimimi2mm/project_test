@@ -69,11 +69,12 @@ export default function Home() {
           <Shikumi />
           <Photo />
 
-
+          {/*
           <p className="text-2xl mb-3">ハイテクガーデンとは？</p>
           <p className="text-base">
             間接的な体験から農業への意識を高めることを目的としたスマート農業
           </p>
+          */}
         </div>
 
         <style jsx global>{`
