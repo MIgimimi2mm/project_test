@@ -6,7 +6,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Header from '../components/Header.js';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Mizuyari from '../components/Mizuyari.js';
+import Shikumi from '../components/Shikumi.js';
+import { motion } from 'framer-motion';
 
 export default function Home() {
 
@@ -21,80 +23,50 @@ export default function Home() {
         <title>ハイテクガーデン</title>
       </Head>
 
-      <div className="flex items-center justify-center ">
-        <Image
-          src="/images/yasai.jpg"
-          alt="Scenic garden view"
-          //className="w-full h-80 object-cover"
-          width={1000}
-          height={760}
-        />
-      </div>
-      <div className="p-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
 
-        <h3 className="text-lg font-semibold mb-4">現在の畑情報</h3>
-        <div className="grid grid-cols-2 gap-4 mb-6 ">
-          <div className="border rounded-lg p-4 bg-[#6e8b5e]">
-            <i className="fas fa-thermometer-half text-xl mb-2"></i>
-            <p className="text-xl">23°C</p>
-            <p className="text-white ">気温</p>
-          </div>
-          <div className="border rounded-lg p-4 bg-[#6e8b5e]">
-            <i className="fas fa-tint text-xl mb-2"></i>
-            <p className="text-xl">51%</p>
-            <p className="text-white">土壌湿度</p>
-          </div>
+        exit={{ opacity: 0 }} >
+
+
+        <div className="flex items-center justify-center ">
+          <Image
+            src="/images/yasai.jpg"
+            alt="Scenic garden view"
+            //className="w-full h-80 object-cover"
+            width={1000}
+            height={760}
+          />
         </div>
+        <div className="p-6">
 
-
-
-
-        <div className="flex items-center justify-center">
-          <Link href="/directory/water">
-            <div className="border rounded-lg p-4 bg-[#6e8b5e] mb-6 px-8">
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-
-                  <Image
-                    src="/images/jouro.png"
-                    alt="High-tech Garden logo"
-                    width={150}
-                    height={150}
-                  />
-
-
-
-                </div>
-                <div class="flex items-center justify-center">
-
-                  <div>
-                    <div class="text-4xl  mb-2">
-                      <nobr>
-                        水をあげる
-                      </nobr>
-                    </div>
-                    <div class="flex items-center justify-center">
-                      タップしてね！
-
-                    </div>
-                  </div>
-
-
-                </div>
-
-              </div>
-
+          <h3 className="text-lg font-semibold mb-4">現在の畑情報</h3>
+          <div className="grid grid-cols-2 gap-4 mb-6 ">
+            <div className="border rounded-lg p-4 bg-[#6e8b5e]">
+              <i className="fas fa-thermometer-half text-xl mb-2"></i>
+              <p className="text-xl">23°C</p>
+              <p className="text-white ">気温</p>
             </div>
-          </Link>
-        </div>
-        <p className="text-2xl mb-3">ハイテクガーデンとは？</p>
-        <p className="text-base">
-          間接的な体験から農業への意識を高めることを目的としたスマート農業
-        </p>
-      </div>
+            <div className="border rounded-lg p-4 bg-[#6e8b5e]">
+              <i className="fas fa-tint text-xl mb-2"></i>
+              <p className="text-xl">51%</p>
+              <p className="text-white">土壌湿度</p>
+            </div>
+          </div>
 
-      <style jsx global>{`
+
+          <Mizuyari />
+          <Shikumi />
+
+
+          <p className="text-2xl mb-3">ハイテクガーデンとは？</p>
+          <p className="text-base">
+            間接的な体験から農業への意識を高めることを目的としたスマート農業
+          </p>
+        </div>
+
+        <style jsx global>{`
         .stroke-black {
           text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
@@ -103,6 +75,7 @@ export default function Home() {
         }
       `}</style>
 
+      </motion.div>
 
 
 
