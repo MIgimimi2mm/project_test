@@ -5,6 +5,7 @@ import React from "react";
 import Header from '/components/Header.js'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Icon_bar from '../../components/Icon_bar';
 
 
 
@@ -20,6 +21,7 @@ function Photo() {
                     exit={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }} >
+                    <Icon_bar />
                     <div className="grid grid-cols-2 gap-4 rounded">
                         <Image
                             src="/images/photo (1).jpg"
