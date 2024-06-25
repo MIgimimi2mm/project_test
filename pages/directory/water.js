@@ -84,7 +84,7 @@ export default function Water() {
                         className="w-full h-full flex flex-col items-center justify-center "
                     >
                         <div className="flex flex-col items-center justify-center w-full">
-                            <div class="mt-6 mb-12">
+                            <div class="mt-0.5 mb-12">
                                 <T_mizuyari />
                             </div>
                         </div>

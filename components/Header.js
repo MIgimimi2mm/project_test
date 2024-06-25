@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function MainComponent() {
     return (
-        <header className="text-center py-4 bg-[#547443] shadow-md">
+        <header className="text-center py-4 bg-[#547443] shadow-9xl">
             <div className="flex items-center justify-center">
                 <Link href="/" scroll={false}>
                     <Image
