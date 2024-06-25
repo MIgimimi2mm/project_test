@@ -1,3 +1,5 @@
+"use client";
+
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -68,7 +70,9 @@ export default function Home() {
 
                   <div>
                     <div class="text-4xl  mb-2">
-                      水をあげる
+                      <nobr>
+                        水をあげる
+                      </nobr>
                     </div>
                     <div class="flex items-center justify-center">
                       タップしてね！
