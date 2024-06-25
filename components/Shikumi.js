@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Shikumi() {
     return (
         <div className="flex items-center justify-center">
-            <Link href="/directory/water">
+            <Link href="/directory/logic" scroll={false}>
                 <div className="border rounded-lg p-4 bg-[#6e8b5e] mb-6 px-8">
 
                     <div className="grid grid-cols-2 gap-4">

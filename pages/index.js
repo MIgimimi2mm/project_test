@@ -9,6 +9,9 @@ import Link from 'next/link';
 import Mizuyari from '../components/Mizuyari.js';
 import Shikumi from '../components/Shikumi.js';
 import { motion } from 'framer-motion';
+import Photo from '../components/Photo.js';
+import Garden from '../components/Garden.js';
+
 
 export default function Home() {
 
@@ -24,10 +27,12 @@ export default function Home() {
       </Head>
 
       <motion.div
+        viewport={{ once: true }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
 
-        exit={{ opacity: 0 }} >
+        exit={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }} >
 
 
         <div className="flex items-center justify-center ">
@@ -41,7 +46,7 @@ export default function Home() {
         </div>
         <div className="p-6">
 
-          <h3 className="text-lg font-semibold mb-4">現在の畑情報</h3>
+          <h3 className="text-lg font-semibold mb-1">現在の畑情報</h3>
           <div className="grid grid-cols-2 gap-4 mb-6 ">
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-thermometer-half text-xl mb-2"></i>
@@ -55,9 +60,14 @@ export default function Home() {
             </div>
           </div>
 
+          <h3 className="text-lg font-semibold mb-1">MENU</h3>
+
+
 
           <Mizuyari />
+          <Garden />
           <Shikumi />
+          <Photo />
 
 
           <p className="text-2xl mb-3">ハイテクガーデンとは？</p>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import css from "styled-jsx/css";
 import { useState, useEffect } from 'react';
-import T_mizuyari from '../../components/T_mizuyari';
+import Icon_bar from '../../components/Icon_bar';
 
 export default function Water() {
     const [clickCount, setClickCount] = useState(0);
@@ -74,38 +74,42 @@ export default function Water() {
 
                 <Header />
 
-                <div className="flex justify-center min-h-screen bg-[#547443] p-6">
+                <div className="flex justify-center min-h-screen bg-[#547443] p-6 text-white ">
 
 
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                         exit={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
                         className="w-full h-full flex flex-col items-center justify-center "
                     >
                         <div className="flex flex-col items-center justify-center w-full">
-                            <div class="mt-0.5 mb-12">
-                                <T_mizuyari />
+                            <div class=" mb-12">
+                                <Icon_bar />
                             </div>
                         </div>
 
-                        <h1 className="text-white text-4xl font-bold mb-4 text-center">
+                        <h1 className="text-4xl font-bold mb-4 text-center">
                             下のアイコンをタップ！
                         </h1>
-
-                        <div className="wrapper">
-                            <motion.button
-                                whileTap={{ scale: 1.3 }}
-                                className="w-[300px] h-[300px] rounded-full bg-[#3869b4] flex items-center justify-center"
-                                onClick={handleClick}
-                            >
-                                <img
-                                    src="/images/water.jpg"
-                                    alt="funnel inside a round icon"
-                                    className="w-[250px] h-[250px] rounded-full"
-                                />
-                            </motion.button>
-                        </div>
+                        <Link href="/directory/thanks" scroll={false}>
+                            <div className="wrapper">
+                                <motion.button
+                                    whileTap={{ scale: 1.3 }}
+                                    className="border w-[300px] h-[300px] rounded-full bg-[#6e8b5e] flex items-center justify-center"
+                                    onClick={handleClick}
+                                >
+                                    <img
+                                        src="/images/jouro1.png"
+                                        alt="funnel inside a round icon"
+                                        className="w-[250px] h-[250px] rounded-full"
+                                    />
+                                </motion.button>
+                            </div>
+                        </Link>
                     </motion.div>
 
                 </div>
