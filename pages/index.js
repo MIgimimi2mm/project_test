@@ -63,46 +63,13 @@ export default function Home() {
           <h3 className="text-lg font-semibold mb-1">MENU</h3>
 
 
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-          >
 
-            <Mizuyari />
 
-          </motion.div>
+          <Mizuyari />
+          <Garden />
+          <Shikumi />
+          <Photo />
 
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-          >
-            <Garden />
-
-          </motion.div>
-
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-          >
-            <Shikumi />
-
-          </motion.div>
-
-          <motion.div
-            viewport={{ once: true }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-          >
-            <Photo />
-
-          </motion.div>
 
 
           {/*
