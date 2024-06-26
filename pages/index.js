@@ -11,11 +11,23 @@ import Shikumi from '../components/Shikumi.js';
 import { motion } from 'framer-motion';
 import Photo from '../components/Photo.js';
 import Garden from '../components/Garden.js';
+import { useEffect, useState } from 'react';
+
 
 
 export default function Home() {
 
+  const [temperature, setTemperature] = useState(null);
 
+  useEffect(() => {
+    async function fetchTemperature() {
+      const res = await fetch('https://smart.tcpexposer.com/info');
+      const data = await res.json();
+      setTemperature(data.tmp);
+    }
+
+    fetchTemperature();
+  }, []);
 
   return (
 
@@ -50,7 +62,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 mb-6 ">
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-thermometer-half text-xl mb-2"></i>
-              <p className="text-xl">23°C</p>
+              <p className="text-xl">{temperature}°C</p>
               <p className="text-white ">気温</p>
             </div>
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
