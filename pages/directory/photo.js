@@ -35,6 +35,8 @@ function Photo() {
                                         width={1000}
                                         height={760}
                                         className="w-full h-auto rounded-lg"
+                                        placeholder="blur" // ぼかし効果を追加
+                                        blurDataURL={`${src}?auto=format,blur`} // 低解像度のプレースホルダー画像を指定
                                     />
                                 </motion.div>
                             ))}
