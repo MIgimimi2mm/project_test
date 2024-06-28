@@ -20,13 +20,23 @@ export default function Home() {
   const [temperature, setTemperature] = useState(null);
 
   useEffect(() => {
-    async function fetchTemperature() {
-      const res = await fetch('https://smart.tcpexposer.com/info');
+
+
+    async function fetchSoilMoisture() {
+      const res = await fetch('https://smart.exposer/info');
       const data = await res.json();
-      setTemperature(data.tmp);
+      setSoilMoisture(data.soil_moisture);
     }
 
-    fetchTemperature();
+    async function fetchWeather() {
+      const res = await fetch('https://smart.exposer/weather');
+      const data = await res.json();
+      setWeatherData(data.weather_data);
+    }
+
+    fetchSoilMoisture();
+    fetchWeather();
+
   }, []);
 
   return (
@@ -63,7 +73,7 @@ export default function Home() {
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-thermometer-half text-xl mb-2"></i>
               {temperature !== null ? (
-                <p className="text-xl">{temperature}°C</p>
+                <p className="text-xl">{weatherData}°C</p>
               ) : (
                 <p className="text-xl">？°C</p>
               )}
@@ -71,7 +81,7 @@ export default function Home() {
             </div>
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-tint text-xl mb-2"></i>
-              <p className="text-xl">51%</p>
+              <p className="text-xl">？</p>
               <p className="text-white">土壌湿度</p>
             </div>
           </div>
