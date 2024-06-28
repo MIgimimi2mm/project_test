@@ -20,6 +20,18 @@ function Photo() {
                     >
 
                         <Icon_bar />
+                        <motion.div
+                            key="photo-page"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.4, delay: 0.2, duration: 0.5 }}
+                        >
+
+                            <h1 className="text-4xl font-bold mb-4 "> 写真を見る</h1>
+
+                        </motion.div>
+
                         <div className="grid grid-cols-2 gap-4 rounded">
                             {['photo (1).jpg', 'photo (2).jpg', 'photo (3).jpg', 'photo (4).jpg', 'photo (5).jpg', 'photo (6).jpg', 'photo (7).jpg', 'photo (8).jpg', 'photo (9).jpg'].map((src, index) => (
                                 <motion.div

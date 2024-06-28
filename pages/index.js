@@ -62,7 +62,11 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 mb-6 ">
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-thermometer-half text-xl mb-2"></i>
-              <p className="text-xl">{temperature}°C</p>
+              {temperature !== null ? (
+                <p className="text-xl">{temperature}°C</p>
+              ) : (
+                <p className="text-xl">？°C</p>
+              )}
               <p className="text-white ">気温</p>
             </div>
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">

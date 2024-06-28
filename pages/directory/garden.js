@@ -18,11 +18,11 @@ function Garden() {
                     exit={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }} >
-                    <div className="flex flex-col items-center justify-center w-full">
-                        <div class="mb-12">
-                            <Icon_bar />
-                        </div>
+                    <div className="flex flex-col items-cen１ter justify-center w-full">
+
+                        <Icon_bar />
                     </div>
+                    <h1 className="text-4xl font-bold mb-4 "> 説明を読む</h1>
 
                     <h1 className="text-4xl font-bold mb-4 text-center">
 
