@@ -23,13 +23,13 @@ export default function Home() {
 
 
     async function fetchSoilMoisture() {
-      const res = await fetch('https://smart.exposer/info');
+      const res = await fetch('https://smart.exposer.com/info');
       const data = await res.json();
       setSoilMoisture(data.soil_moisture);
     }
 
     async function fetchWeather() {
-      const res = await fetch('https://smart.exposer/weather');
+      const res = await fetch('https://smart.exposer.com/weather');
       const data = await res.json();
       setWeatherData(data.weather_data);
     }
@@ -38,6 +38,8 @@ export default function Home() {
     fetchWeather();
 
   }, []);
+
+  //a
 
   return (
 
