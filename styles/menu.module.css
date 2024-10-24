@@ -1,0 +1,48 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    color: #ffffff;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #4a5d23;
+    z-index: 1;
+}
+
+
+
+.icon-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.textplaceholder {
+    border-radius: 5px;
+    width: 300px;
+    height: 80px;
+    font-size: 40px;
+    display: flex;
+    margin-left: 30px;
+
+    align-items: center;
+    /* 垂直方向の中央寄せ */
+    color: #ffffff;
+
+}
+
+.ul {
+    padding: 25px;
+    position: absolute;
+    top: 100px;
+    width: 230px;
+}

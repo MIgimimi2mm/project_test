@@ -24,9 +24,9 @@ function Garden() {
                     </div>
                     <h1 className="text-4xl font-bold mb-4 "> 説明を読む</h1>
 
-                    <h1 className="text-4xl font-bold mb-4 text-center">
+                    <h1 className="text-3xl font-semibold mb-4 text-center">
 
-                        Coming Soon
+                        ハイテクガーデンとは？
                     </h1>
 
                 </motion.div>
