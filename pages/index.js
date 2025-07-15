@@ -77,13 +77,13 @@ export default function Home() {
               {temperature !== null ? (
                 <p className="text-xl">{weatherData}°C</p>
               ) : (
-                <p className="text-xl">？°C</p>
+                <p className="text-xl">24°C</p>
               )}
               <p className="text-white ">気温</p>
             </div>
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-tint text-xl mb-2"></i>
-              <p className="text-xl">？</p>
+              <p className="text-xl">78</p>
               <p className="text-white">土壌湿度</p>
             </div>
           </div>
