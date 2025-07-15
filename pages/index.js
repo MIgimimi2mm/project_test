@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="border rounded-lg p-4 bg-[#6e8b5e]">
               <i className="fas fa-tint text-xl mb-2"></i>
-              <p className="text-xl">78</p>
+              <p className="text-xl">78%</p>
               <p className="text-white">土壌湿度</p>
             </div>
           </div>
